@@ -1,0 +1,9 @@
+{
+    "health": 2000,
+    "radius": 45,
+    "bool": [
+        "OBSTACLE",
+        "BREAKABLE",
+        "EXTRACTOR"
+    ]
+}

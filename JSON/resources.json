@@ -1,0 +1,370 @@
+{
+    "objects": [
+        {
+            "type": "p",
+            "subtype": 0,
+            "radius": 77,
+            "resource": "BERRY",
+            "limit": 5,
+            "id": 0
+        },
+        {
+            "type": "s",
+            "subtype": 0,
+            "radius": 102,
+            "resource": "STONE",
+            "limit": 60,
+            "id": 1
+        },
+        {
+            "type": "s",
+            "subtype": 1,
+            "radius": 87,
+            "resource": "STONE",
+            "id": 2,
+            "limit": 45
+        },
+        {
+            "type": "s",
+            "subtype": 2,
+            "radius": 58,
+            "resource": "STONE",
+            "id": 3,
+            "limit": 30
+        },
+        {
+            "type": "t",
+            "subtype": 0,
+            "radius": 102,
+            "resource": "WOOD",
+            "id": 4,
+            "limit": 60
+        },
+        {
+            "type": "t",
+            "subtype": 1,
+            "radius": 102,
+            "resource": "WOOD",
+            "id": 5,
+            "limit": 60
+        },
+        {
+            "type": "t",
+            "subtype": 2,
+            "radius": 77,
+            "resource": "WOOD",
+            "id": 6,
+            "limit": 45
+        },
+        {
+            "type": "t",
+            "subtype": 3,
+            "radius": 77,
+            "resource": "WOOD",
+            "id": 7,
+            "limit": 45
+        },
+        {
+            "type": "t",
+            "subtype": 4,
+            "radius": 60,
+            "resource": "WOOD",
+            "id": 8,
+            "limit": 20
+        },
+        {
+            "type": "t",
+            "subtype": 5,
+            "radius": 60,
+            "resource": "WOOD",
+            "id": 9,
+            "limit": 20
+        },
+        {
+            "type": "g",
+            "subtype": 0,
+            "radius": 90,
+            "resource": "GOLD",
+            "id": 10,
+            "limit": 50
+        },
+        {
+            "type": "g",
+            "subtype": 1,
+            "radius": 75,
+            "resource": "GOLD",
+            "id": 11,
+            "limit": 40
+        },
+        {
+            "type": "g",
+            "subtype": 2,
+            "radius": 65,
+            "resource": "GOLD",
+            "id": 12,
+            "limit": 20
+        },
+        {
+            "type": "d",
+            "subtype": 0,
+            "radius": 85,
+            "resource": "DIAMOND",
+            "id": 13,
+            "limit": 40
+        },
+        {
+            "type": "d",
+            "subtype": 1,
+            "radius": 75,
+            "resource": "DIAMOND",
+            "id": 14,
+            "limit": 20
+        },
+        {
+            "type": "d",
+            "subtype": 2,
+            "radius": 60,
+            "resource": "DIAMOND",
+            "id": 15,
+            "limit": 5
+        },
+        {
+            "type": "b",
+            "subtype": 0,
+            "radius": 97,
+            "resource": "WOOD",
+            "id": 16,
+            "limit": 60
+        },
+        {
+            "type": "b",
+            "subtype": 1,
+            "radius": 97,
+            "resource": "WOOD",
+            "id": 17,
+            "limit": 60
+        },
+        {
+            "type": "b",
+            "subtype": 2,
+            "radius": 80,
+            "resource": "WOOD",
+            "id": 18,
+            "limit": 45
+        },
+        {
+            "type": "b",
+            "subtype": 3,
+            "radius": 80,
+            "resource": "WOOD",
+            "limit": 45,
+            "id": 19
+        },
+        {
+            "type": "f",
+            "subtype": 0,
+            "radius": 140,
+            "resource": "WOOD",
+            "limit": 60,
+            "id": 20
+        },
+        {
+            "type": "f",
+            "subtype": 1,
+            "radius": 115,
+            "resource": "WOOD",
+            "limit": 45,
+            "id": 21
+        },
+        {
+            "type": "f",
+            "subtype": 2,
+            "radius": 95,
+            "resource": "WOOD",
+            "limit": 35,
+            "id": 22
+        },
+        {
+            "type": "a",
+            "subtype": 0,
+            "radius": 85,
+            "resource": "AMETHYST",
+            "limit": 30,
+            "id": 32
+        },
+        {
+            "type": "a",
+            "subtype": 1,
+            "radius": 75,
+            "resource": "AMETHYST",
+            "limit": 20,
+            "id": 33
+        },
+        {
+            "type": "a",
+            "subtype": 2,
+            "radius": 75,
+            "resource": "AMETHYST",
+            "limit": 20,
+            "id": 34
+        },
+        {
+            "type": "cs",
+            "subtype": 0,
+            "radius": 100,
+            "id": 35
+        },
+        {
+            "type": "cs",
+            "subtype": 1,
+            "radius": 87,
+            "id": 36
+        },
+        {
+            "type": "cs",
+            "subtype": 2,
+            "radius": 95,
+            "id": 37
+        },
+        {
+            "type": "cs",
+            "subtype": 3,
+            "radius": 90,
+            "id": 38
+        },
+        {
+            "type": "plm",
+            "subtype": 0,
+            "radius": 30,
+            "resource": "WOOD",
+            "limit": 20,
+            "id": 40
+        },
+        {
+            "type": "plm",
+            "subtype": 1,
+            "radius": 47,
+            "resource": "WOOD",
+            "limit": 30,
+            "id": 41
+        },
+        {
+            "type": "plm",
+            "subtype": 2,
+            "radius": 65,
+            "resource": "WOOD",
+            "limit": 60,
+            "id": 42
+        },
+        {
+            "type": "re",
+            "subtype": 0,
+            "radius": 67,
+            "resource": "REIDITE",
+            "limit": 5,
+            "id": 50
+        },
+        {
+            "type": "re",
+            "subtype": 1,
+            "radius": 82,
+            "resource": "REIDITE",
+            "limit": 10,
+            "id": 51
+        },
+        {
+            "type": "re",
+            "subtype": 2,
+            "radius": 90,
+            "resource": "REIDITE",
+            "limit": 15,
+            "id": 52
+        },
+        {
+            "type": "c",
+            "radius": 55,
+            "subtype": 0,
+            "resource": "CACTUS",
+            "limit": 1,
+            "id": 55
+        },
+        {
+            "type": "m",
+            "subtype": 0,
+            "radius": 85,
+            "resource": "EMERALD",
+            "limit": 10,
+            "id": 56
+        },
+        {
+            "type": "m",
+            "subtype": 1,
+            "radius": 85,
+            "resource": "EMERALD",
+            "limit": 10,
+            "id": 57
+        },
+        {
+            "type": "m",
+            "subtype": 2,
+            "radius": 90,
+            "resource": "EMERALD",
+            "limit": 15,
+            "id": 58
+        },
+        {
+            "type": "iblk",
+            "subtype": 0,
+            "radius": 0,
+            "id": 0
+        },
+        {
+            "type": "r",
+            "subtype": 0,
+            "radius": 0,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 0,
+            "radius": 200,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 1,
+            "radius": 115,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 2,
+            "radius": 85,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 3,
+            "radius": 180,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 4,
+            "radius": 115,
+            "id": 0
+        },
+        {
+            "type": "la",
+            "subtype": 5,
+            "radius": 80,
+            "id": 0
+        },
+        {
+            "type": "ma",
+            "subtype": 0,
+            "radius": 0,
+            "id": 0
+        }
+    ]
+}

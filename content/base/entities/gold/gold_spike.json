@@ -1,0 +1,10 @@
+{
+    "health": 600,
+    "radius": 35,
+    "damage": 30,
+    "on_hit_damage": 3,
+    "bool": [
+        "OBSTACLE",
+        "HEALTH_BAR"
+    ]
+}

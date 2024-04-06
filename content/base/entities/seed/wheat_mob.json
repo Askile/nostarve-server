@@ -1,0 +1,7 @@
+{
+    "health": 100,
+    "radius": 25,
+    "on_kill": [
+        "g $id wheat_seed 1"
+    ]
+}

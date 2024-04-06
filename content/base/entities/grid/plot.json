@@ -1,0 +1,7 @@
+{
+    "health": 2000,
+    "radius": 25,
+    "bool": [
+        "GRID"
+    ]
+}

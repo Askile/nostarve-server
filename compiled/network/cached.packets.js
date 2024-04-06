@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CachedPackets = void 0;
+const packets_1 = require("../enums/packets");
+exports.CachedPackets = new Map();
+exports.CachedPackets.set(packets_1.ClientPackets.FULL, new Uint8Array([packets_1.ClientPackets.FULL]));
+exports.CachedPackets.set(packets_1.ClientPackets.CAPTCHA, new Uint8Array([packets_1.ClientPackets.CAPTCHA]));
+exports.CachedPackets.set(packets_1.ClientPackets.OLD_VERSION, new Uint8Array([packets_1.ClientPackets.OLD_VERSION]));
+exports.CachedPackets.set(packets_1.ClientPackets.DONT_HARVEST, new Uint8Array([packets_1.ClientPackets.DONT_HARVEST]));
+exports.CachedPackets.set(packets_1.ClientPackets.EMPTY_RES, new Uint8Array([packets_1.ClientPackets.EMPTY_RES]));
+exports.CachedPackets.set(packets_1.ClientPackets.INV_FULL, new Uint8Array([packets_1.ClientPackets.INV_FULL]));
+exports.CachedPackets.set(packets_1.ClientPackets.GET_BAG, new Uint8Array([packets_1.ClientPackets.GET_BAG]));
+exports.CachedPackets.set(packets_1.ClientPackets.CLEAN_INVENTORY, new Uint8Array([packets_1.ClientPackets.CLEAN_INVENTORY]));

@@ -1,0 +1,14 @@
+{
+  "production": false,
+  "subdomain": "paris",
+  "domain": "nostarve.io",
+  "account_domain": "nostarve.io",
+  "owner_login": "Askile",
+  "admins": ["Askile", "LapaMauve"],
+  "mode": "community",
+  "master_password": "6241a2e3-c459-4bc8-8219-1e934300942b",
+  "tps": 30,
+  "experience_factor": 0.1,
+  "save_interval": 10,
+  "player_limit": 242
+}

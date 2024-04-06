@@ -1,0 +1,9 @@
+{
+    "health": 500,
+    "radius": 25,
+    "bool": [
+        "GRID",
+        "HEALTH_BAR",
+        "NO_CHECK_PLACEMENT"
+    ]
+}

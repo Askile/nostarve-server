@@ -1,0 +1,9 @@
+{
+    "health": 1000,
+    "radius": 45,
+    "bool": [
+        "OBSTACLE",
+        "DOOR",
+        "HEALTH_BAR"
+    ]
+}
