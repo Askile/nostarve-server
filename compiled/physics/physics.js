@@ -8,7 +8,7 @@ const state_type_1 = require("../enums/types/state.type");
 const physics_utils_1 = __importDefault(require("./physics.utils"));
 const tile_type_1 = require("../enums/types/tile.type");
 const entity_type_1 = require("../enums/types/entity.type");
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const packets_1 = require("../enums/packets");
 class Physics {
     // public static update(entity: Entity) {
@@ -118,7 +118,7 @@ class Physics {
                 state += state_type_1.StateType.IN_PLOT;
             if (entity.type === entity_type_1.EntityType.FIRE && !(state & state_type_1.StateType.IN_FIRE))
                 state += state_type_1.StateType.IN_FIRE;
-            if (entity instanceof b_1.default && entity.isSeed() && !(state & state_type_1.StateType.IN_SEED))
+            if (entity instanceof building_1.default && entity.isSeed() && !(state & state_type_1.StateType.IN_SEED))
                 state += state_type_1.StateType.IN_SEED;
         }
         if (biomesString.length >= 1) {
@@ -148,7 +148,7 @@ class Physics {
                 if (nearest[unit.type] === undefined || dist < nearest[unit.type][0]) {
                     nearest[unit.type] = [dist, unit];
                 }
-                if (unit instanceof b_1.default) {
+                if (unit instanceof building_1.default) {
                     if (unit.type === entity_type_1.EntityType.WORKBENCH && dist < 180 && (state & state_type_1.StateType.WORKBENCH) !== state_type_1.StateType.WORKBENCH) {
                         state += state_type_1.StateType.WORKBENCH;
                     }

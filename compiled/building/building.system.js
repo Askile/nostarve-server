@@ -14,7 +14,7 @@ const crate_1 = require("../entities/crate");
 const packets_1 = require("../enums/packets");
 const building_utils_1 = __importDefault(require("./building.utils"));
 const physics_1 = __importDefault(require("../physics/physics"));
-const b_1 = __importDefault(require("./b"));
+const building_1 = __importDefault(require("./building"));
 const binary_writer_1 = require("../modules/binary.writer");
 class BuildingSystem {
     server;
@@ -43,7 +43,7 @@ class BuildingSystem {
                     // Player already has a machine
                     (player.machine && type === entity_type_1.EntityType.EMERALD_MACHINE))
                     continue;
-                let building = new b_1.default(type, player, this.server);
+                let building = new building_1.default(type, player, this.server);
                 building.angle = angle;
                 building.position.set(utils_1.Utils.getOffsetVector(player.realPosition, 120, angle));
                 if (isGrid || building.hasComponent("GRID" /* ComponentType.GRID */) || (building.isSeed() && building.hasState(state_type_1.StateType.IN_PLOT))) {
@@ -92,7 +92,7 @@ class BuildingSystem {
                             !entity.hasState(state_type_1.StateType.GHOST) &&
                             !(entity instanceof player_1.default && entity.flight) &&
                             !(entity instanceof crate_1.Crate) &&
-                            !(entity instanceof b_1.default && entity.noCheck())) {
+                            !(entity instanceof building_1.default && entity.noCheck())) {
                             continueLoop = true;
                         }
                     }

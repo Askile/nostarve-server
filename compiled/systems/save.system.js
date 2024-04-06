@@ -28,7 +28,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SaveSystem = void 0;
 const fs = __importStar(require("fs"));
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const crate_1 = require("../entities/crate");
 const entity_type_1 = require("../enums/types/entity.type");
 const player_1 = __importDefault(require("../entities/player"));
@@ -110,7 +110,7 @@ class SaveSystem {
             if (!player?.alive) {
                 continue;
             }
-            const building = new b_1.default(type, player, this.server);
+            const building = new building_1.default(type, player, this.server);
             this.server.entities[id] = building;
             this.server.entityPool.used[id] = true;
             building.id = id;
@@ -185,7 +185,7 @@ class SaveSystem {
             if (entity instanceof player_1.default && entity.alive) {
                 playersData.push(entity.serialize());
             }
-            else if (entity instanceof b_1.default) {
+            else if (entity instanceof building_1.default) {
                 buildingsData.push(entity.serialize());
             }
             else if (entity instanceof crate_1.Crate) {

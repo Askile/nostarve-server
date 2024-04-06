@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.run = exports.permission = exports.identifiers = void 0;
 const permissions_1 = require("../../../enums/permissions");
-const b_1 = __importDefault(require("../../../building/b"));
+const building_1 = __importDefault(require("../../../building/building"));
 exports.identifiers = ["cba", "clean-building-all"];
 exports.permission = permissions_1.Permissions.OWNER;
 function run(player, args, isServer) {
@@ -16,7 +16,7 @@ function run(player, args, isServer) {
     let ey = Number(args[3]);
     if (isNaN(sx) || isNaN(sy) || isNaN(ex) || isNaN(ey)) {
         for (const entity of Object.values(this.server.entities)) {
-            if (entity instanceof b_1.default && entity.owner) {
+            if (entity instanceof building_1.default && entity.owner) {
                 count++;
                 entity.delete();
                 entity.onDead();
@@ -29,7 +29,7 @@ function run(player, args, isServer) {
         ex = Math.floor(ex) * 100 + 50;
         ey = Math.floor(ey) * 100 + 50;
         for (const entity of Object.values(this.server.entities)) {
-            if (entity instanceof b_1.default && entity.owner && entity.position.x >= sx && entity.position.y >= sy && entity.position.x <= ex && entity.position.y <= ey) {
+            if (entity instanceof building_1.default && entity.owner && entity.position.x >= sx && entity.position.y >= sy && entity.position.x <= ex && entity.position.y <= ey) {
                 count++;
                 entity.delete();
                 entity.onDead();

@@ -17,7 +17,7 @@ const default_map_1 = require("../default/default.map");
 const game_mode_1 = require("../enums/game.mode");
 const generator_1 = require("./generator");
 const team_system_1 = __importDefault(require("../team/team.system"));
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 class World {
     objects = [];
     server;
@@ -249,7 +249,7 @@ class World {
         let minDist = Infinity;
         let target = null;
         for (const entity of entities) {
-            if (!(entity instanceof b_1.default))
+            if (!(entity instanceof building_1.default))
                 continue;
             const isSelf = self == entity;
             const isOpen = entity.info % 2 && entity.hasComponent("DOOR" /* ComponentType.DOOR */);

@@ -12,7 +12,7 @@ const item_type_1 = require("../enums/types/item.type");
 const world_time_1 = require("../enums/world.time");
 const death_reason_1 = require("../enums/death.reason");
 const health_system_1 = __importDefault(require("../attributes/health.system"));
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const tile_1 = require("../world/tile");
 const tile_type_1 = require("../enums/types/tile.type");
 const crate_1 = require("../entities/crate");
@@ -84,7 +84,7 @@ class CombatSystem {
                 unit.reason = death_reason_1.DeathReason.PLAYER;
                 health_system_1.default.damage(unit, (player.right.damage + unit.defense) * (team_system_1.default.isAlly(player, unit) ? .3 : 1), action_type_1.ActionType.HURT, player);
             }
-            else if (unit instanceof b_1.default) {
+            else if (unit instanceof building_1.default) {
                 if (player.flight)
                     continue;
                 if (player.right.id === item_type_1.ItemType.WRENCH) {

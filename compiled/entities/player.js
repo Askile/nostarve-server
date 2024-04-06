@@ -8,7 +8,7 @@ const default_values_1 = require("../default/default.values");
 const entity_type_1 = require("../enums/types/entity.type");
 const death_reason_1 = require("../enums/death.reason");
 const permissions_1 = require("../enums/permissions");
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const item_type_1 = require("../enums/types/item.type");
 const quest_type_1 = require("../enums/types/quest.type");
 const state_type_1 = require("../enums/types/state.type");
@@ -442,7 +442,7 @@ class Player extends entity_1.Entity {
         writer.writeUInt32(this.score);
         this.client?.sendBinary(writer.toBuffer());
         this.client.close();
-        if (this.totem instanceof b_1.default && this.totem.owner !== this) {
+        if (this.totem instanceof building_1.default && this.totem.owner !== this) {
             this.server.teamSystem.excludeMemberId(this.totem, this.id);
         }
         for (const building of this.buildings.flat(1)) {

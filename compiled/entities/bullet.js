@@ -9,7 +9,7 @@ const entity_type_1 = require("../enums/types/entity.type");
 const player_1 = __importDefault(require("./player"));
 const utils_1 = require("../modules/utils");
 const action_type_1 = require("../enums/types/action.type");
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const tile_1 = require("../world/tile");
 const physics_utils_1 = __importDefault(require("../physics/physics.utils"));
 const health_system_1 = __importDefault(require("../attributes/health.system"));
@@ -84,7 +84,7 @@ class Bullet extends entity_1.Entity {
                     health_system_1.default.damage(collider, this.data[ArrowData.DAMAGE] + collider.bulletDefense, action_type_1.ActionType.HURT, this);
                     return this.delete();
                 }
-                else if (collider instanceof b_1.default && !this.flight && !(isTower && collider.type !== entity_type_1.EntityType.ROOF)) {
+                else if (collider instanceof building_1.default && !this.flight && !(isTower && collider.type !== entity_type_1.EntityType.ROOF)) {
                     health_system_1.default.damage(collider, this.data[ArrowData.DAMAGE], action_type_1.ActionType.HURT, this);
                     this.server.buildingSystem.addShake(this.angle, collider.id);
                     return this.delete();

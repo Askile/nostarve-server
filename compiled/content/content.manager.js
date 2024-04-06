@@ -29,15 +29,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ContentManager = void 0;
 const fs = __importStar(require("fs"));
 const logger_1 = require("../modules/logger");
-const item_type_1 = require("../enums/types/item.type");
 const path_1 = __importDefault(require("path"));
 const entity_type_1 = require("../enums/types/entity.type");
 class ContentManager {
     server;
-    // private interpreter: NoscriptInterpreter;
     constructor(server) {
         this.server = server;
-        // this.interpreter = new NoscriptInterpreter(server);
         this.loadPackages();
     }
     softReadDir(dir) {
@@ -90,40 +87,11 @@ class ContentManager {
         const fileNames = this.softReadDir("./content");
         for (const fileName of fileNames) {
             this.server.logger.log(`[Content] ${logger_1.CONSOLE_FORMATTERS.MAGENTA}Loading ${fileName} content-pack`);
-            const itemsFolder = this.softReadDir(`./content/${fileName}/items`);
             const entitiesFolder = this.softReadDir(`./content/${fileName}/entities`);
-            const scriptsFolder = this.softReadDir(`./content/${fileName}/scripts`);
-            const texturesFolder = this.softReadDir(`./content/${fileName}/textures`);
-            if (itemsFolder.length !== 0 || entitiesFolder.length !== 0 ||
-                scriptsFolder.length !== 0 || texturesFolder.length !== 0) {
-                this.server.logger.log(`[Content]${logger_1.CONSOLE_FORMATTERS.GREEN} Loaded ${itemsFolder.length} items`);
+            if (entitiesFolder.length !== 0) {
                 this.server.logger.log(`[Content]${logger_1.CONSOLE_FORMATTERS.GREEN} Loaded ${entitiesFolder.length} entities`);
-                this.server.logger.log(`[Content]${logger_1.CONSOLE_FORMATTERS.GREEN} Loaded ${scriptsFolder.length} scripts`);
-                this.server.logger.log(`[Content]${logger_1.CONSOLE_FORMATTERS.GREEN} Loaded ${texturesFolder.length} textures`);
-            }
-            for (const item of itemsFolder) {
-                const config = this.softReadFile(`./content/${fileName}/items/${item}`, "utf8");
-                const parsedPath = path_1.default.parse(item);
-                try {
-                    const itemDef = JSON.parse(config);
-                    const id = item_type_1.ItemType[parsedPath.name.toUpperCase()];
-                    if (typeof id !== "number") {
-                        this.server.logger.warn(`[Content] ${logger_1.CONSOLE_FORMATTERS.RESET}${logger_1.CONSOLE_FORMATTERS.BG_YELLOW}Skipped item ${item} invalid item because config not valid`);
-                        return;
-                    }
-                    this.server.content.items[id] = itemDef;
-                }
-                catch (e) {
-                    this.server.logger.warn(`[Content] ${logger_1.CONSOLE_FORMATTERS.RESET}${logger_1.CONSOLE_FORMATTERS.BG_YELLOW}Skipped item ${item} invalid item because config not valid`);
-                }
             }
             this.readEntities(fileName, `./content/${fileName}/entities/`, entitiesFolder);
-            // for (const item of scriptsFolder) {
-            //     const script = this.softReadFile(`./content/${fileName}/scripts/${item}`, "utf8");
-            //
-            //     // this.interpreter.interpret(script);
-            //     this.server.logger.log(`[Content]${CONSOLE_FORMATTERS.GREEN} Loaded ${item} script`);
-            // }
         }
     }
 }

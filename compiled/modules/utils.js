@@ -7,7 +7,7 @@ exports.Utils = void 0;
 const entity_type_1 = require("../enums/types/entity.type");
 const vector_1 = require("./vector");
 const item_type_1 = require("../enums/types/item.type");
-const b_1 = __importDefault(require("../building/b"));
+const building_1 = __importDefault(require("../building/building"));
 const binary_writer_1 = require("./binary.writer");
 const packets_1 = require("../enums/packets");
 class Utils {
@@ -56,7 +56,7 @@ class Utils {
     static getBuildings(entities) {
         let arr = [];
         for (const entity of entities) {
-            if (entity && !(entity instanceof b_1.default))
+            if (entity && !(entity instanceof building_1.default))
                 continue;
             arr.push(entity);
         }
